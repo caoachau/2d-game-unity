@@ -1,0 +1,61 @@
+FALLEN SPIRES - AUTHORING READY PACKAGE
+======================================
+
+Base project preserved:
+- Assets/
+- Packages/
+- ProjectSettings/
+- UserSettings/
+
+Unity version from ProjectSettings/ProjectVersion.txt:
+- 6000.6.0f1
+
+Existing playable project preserved:
+- Assets/_Game/Scenes/Boot.unity
+- Assets/_Game/Scenes/MainMenu.unity
+- Assets/_Game/Scenes/Game.unity
+- Existing gameplay scripts, services, tests and Player prefab
+
+Third-party kits preserved with their original readme/license files under:
+- Assets/_Game/ThirdParty/CaveTiles
+- Assets/_Game/ThirdParty/FantasyForest
+- Assets/_Game/ThirdParty/PixelPlatformer
+- Assets/_Game/ThirdParty/DarkAgesUI
+- Assets/_Game/ThirdParty/MedievalFantasyUI
+
+Added designer-friendly Authoring Library:
+- Assets/_Game/AuthoringLibrary/World/CaveTiles
+- Assets/_Game/AuthoringLibrary/World/ForestTiles
+- Assets/_Game/AuthoringLibrary/World/ForestDecor
+- Assets/_Game/AuthoringLibrary/World/CastlePieces
+- Assets/_Game/AuthoringLibrary/World/CastleDecor
+- Assets/_Game/AuthoringLibrary/Characters/PlayerFrames
+- Assets/_Game/AuthoringLibrary/Characters/SlimeFrames
+- Assets/_Game/AuthoringLibrary/Backgrounds
+- Assets/_Game/AuthoringLibrary/Props/AnimationFrames
+- Assets/_Game/AuthoringLibrary/UI
+
+Added/updated Editor authoring tools:
+- Assets/_Game/Editor/KitAssetPostprocessor.cs
+- Assets/_Game/Editor/LevelAuthoringTools.cs
+
+Available Unity menu:
+Fallen Spires > Authoring
+- Open Authoring Library
+- Create Standard Level Hierarchy
+- Create Ground Tilemap
+- Create Platform From Selected Sprite
+- Create Decoration From Selected Sprite
+- Create Background From Selected Sprite
+- Create UI Image From Selected Sprite
+- Save Selected Scene Object As Prefab
+- Validate Authoring Setup
+
+Important:
+- The original third-party files were not deleted.
+- Existing scene/prefab/script .meta files were preserved.
+- The delivery intentionally excludes Library/Temp/Logs/obj/.vs.
+- Unity will generate .meta files for newly added AuthoringLibrary files on first import.
+- The package was structurally audited outside Unity; the execution environment did not include the Unity Editor, so final compile/import validation must occur on first opening in Unity 6000.6.0f1.
+
+See AUTHORING_GUIDE.md for usage instructions.

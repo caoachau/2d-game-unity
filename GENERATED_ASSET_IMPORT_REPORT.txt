@@ -1,0 +1,9 @@
+Imported package: FallenSpires_AllAssets_From2Screens.zip
+Destination: Assets/_Game/GeneratedAssets/FallenSpires_AllAssets_From2Screens/
+
+Changes made:
+1. Added the complete generated asset package from the two reference screens.
+2. Added Assets/_Game/Editor/GeneratedAssetPostprocessor.cs for Unity-friendly import defaults.
+3. Did not replace existing scenes, prefabs, runtime scripts, Packages, ProjectSettings or UserSettings.
+
+Open the project in Unity and wait for the initial asset import to finish before testing.

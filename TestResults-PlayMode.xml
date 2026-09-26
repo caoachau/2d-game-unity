@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.4760317">
+  <test-suite type="TestSuite" id="1012" name="Fallen Spires" fullname="Fallen Spires" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.476032" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1016" name="Summit.Game.PlayModeTests.dll" fullname="F:/Project/2d/2D game/Library/ScriptAssemblies/Summit.Game.PlayModeTests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.462095" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="11112" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1017" name="Summit" fullname="Summit" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.461212" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1018" name="Game" fullname="Summit.Game" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.460812" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1019" name="Tests" fullname="Summit.Game.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.460454" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1020" name="PlayMode" fullname="Summit.Game.Tests.PlayMode" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.459984" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1013" name="VerticalSliceSmokeTests" fullname="Summit.Game.Tests.PlayMode.VerticalSliceSmokeTests" classname="Summit.Game.Tests.PlayMode.VerticalSliceSmokeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.457524" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1015" name="Game_LoadsWithPlayerHudAndGoal" fullname="Summit.Game.Tests.PlayMode.VerticalSliceSmokeTests.Game_LoadsWithPlayerHudAndGoal" methodname="Game_LoadsWithPlayerHudAndGoal" classname="Summit.Game.Tests.PlayMode.VerticalSliceSmokeTests" runstate="Runnable" seed="1284603497" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.369782" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1014" name="MainMenu_LoadsWithInteractiveUi" fullname="Summit.Game.Tests.PlayMode.VerticalSliceSmokeTests.MainMenu_LoadsWithInteractiveUi" methodname="MainMenu_LoadsWithInteractiveUi" classname="Summit.Game.Tests.PlayMode.VerticalSliceSmokeTests" runstate="Runnable" seed="1171362757" result="Passed" start-time="2026-09-23 14:05:27Z" end-time="2026-09-23 14:05:27Z" duration="0.064895" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/Summit Studio/Fallen Spires\TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

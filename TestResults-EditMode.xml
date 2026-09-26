@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.1347682">
+  <test-suite type="TestSuite" id="1000" name="Fallen Spires" fullname="Fallen Spires" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.134768" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1012" name="Summit.Game.EditModeTests.dll" fullname="F:/Project/2d/2D game/Library/ScriptAssemblies/Summit.Game.EditModeTests.dll" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.111367" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="13492" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1013" name="Summit" fullname="Summit" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.110417" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1014" name="Game" fullname="Summit.Game" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.110119" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1015" name="Tests" fullname="Summit.Game.Tests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.109782" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1016" name="EditMode" fullname="Summit.Game.Tests.EditMode" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.109414" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1001" name="JumpMathTests" fullname="Summit.Game.Tests.EditMode.JumpMathTests" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.107545" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1011" name="Calculate_UsesDirectionAndCharge" fullname="Summit.Game.Tests.EditMode.JumpMathTests.Calculate_UsesDirectionAndCharge" methodname="Calculate_UsesDirectionAndCharge" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="2033686497" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.040753" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1010" name="GetDirection_ReturnsDiscreteDirection" fullname="Summit.Game.Tests.EditMode.JumpMathTests.GetDirection_ReturnsDiscreteDirection" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.009418" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1007" name="GetDirection_ReturnsDiscreteDirection(-1.0f,Left)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.GetDirection_ReturnsDiscreteDirection(-1.0f,Left)" methodname="GetDirection_ReturnsDiscreteDirection" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1534577167" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.003457" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1008" name="GetDirection_ReturnsDiscreteDirection(0.0f,Neutral)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.GetDirection_ReturnsDiscreteDirection(0.0f,Neutral)" methodname="GetDirection_ReturnsDiscreteDirection" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1789000162" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.000404" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1009" name="GetDirection_ReturnsDiscreteDirection(1.0f,Right)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.GetDirection_ReturnsDiscreteDirection(1.0f,Right)" methodname="GetDirection_ReturnsDiscreteDirection" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1139707280" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.000321" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-suite type="ParameterizedMethod" id="1006" name="NormalizeCharge_ClampsToUnitRange" fullname="Summit.Game.Tests.EditMode.JumpMathTests.NormalizeCharge_ClampsToUnitRange" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.017574" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1002" name="NormalizeCharge_ClampsToUnitRange(-1.0f,1.0f,0.0f)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.NormalizeCharge_ClampsToUnitRange(-1.0f,1.0f,0.0f)" methodname="NormalizeCharge_ClampsToUnitRange" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1615458198" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.001213" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1003" name="NormalizeCharge_ClampsToUnitRange(0.5f,1.0f,0.5f)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.NormalizeCharge_ClampsToUnitRange(0.5f,1.0f,0.5f)" methodname="NormalizeCharge_ClampsToUnitRange" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1905977346" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.000203" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1004" name="NormalizeCharge_ClampsToUnitRange(2.0f,1.0f,1.0f)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.NormalizeCharge_ClampsToUnitRange(2.0f,1.0f,1.0f)" methodname="NormalizeCharge_ClampsToUnitRange" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1086617427" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.000148" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1005" name="NormalizeCharge_ClampsToUnitRange(1.0f,0.0f,1.0f)" fullname="Summit.Game.Tests.EditMode.JumpMathTests.NormalizeCharge_ClampsToUnitRange(1.0f,0.0f,1.0f)" methodname="NormalizeCharge_ClampsToUnitRange" classname="Summit.Game.Tests.EditMode.JumpMathTests" runstate="Runnable" seed="1868867271" result="Passed" start-time="2026-09-23 14:04:56Z" end-time="2026-09-23 14:04:56Z" duration="0.000143" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                    <output><![CDATA[Saving results to: C:/Users/ASUS/AppData/LocalLow/Summit Studio/Fallen Spires\TestResults.xml
+]]></output>
+                  </test-case>
+                </test-suite>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

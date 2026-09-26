@@ -1,0 +1,3474 @@
+[
+  {
+    "file": "ReferencePanels/PlayerPanel.png",
+    "source_box": [
+      7,
+      91,
+      513,
+      639
+    ],
+    "transparent": false,
+    "size": [
+      506,
+      548
+    ]
+  },
+  {
+    "file": "ReferencePanels/EnvironmentPanel.png",
+    "source_box": [
+      520,
+      6,
+      1054,
+      440
+    ],
+    "transparent": false,
+    "size": [
+      534,
+      434
+    ]
+  },
+  {
+    "file": "ReferencePanels/BackgroundPanel.png",
+    "source_box": [
+      1063,
+      7,
+      1529,
+      440
+    ],
+    "transparent": false,
+    "size": [
+      466,
+      433
+    ]
+  },
+  {
+    "file": "ReferencePanels/ObjectsPropsPanel.png",
+    "source_box": [
+      520,
+      449,
+      862,
+      707
+    ],
+    "transparent": false,
+    "size": [
+      342,
+      258
+    ]
+  },
+  {
+    "file": "ReferencePanels/NPCEnemiesPanel.png",
+    "source_box": [
+      868,
+      449,
+      1133,
+      707
+    ],
+    "transparent": false,
+    "size": [
+      265,
+      258
+    ]
+  },
+  {
+    "file": "ReferencePanels/EffectsPanel.png",
+    "source_box": [
+      1138,
+      449,
+      1529,
+      686
+    ],
+    "transparent": false,
+    "size": [
+      391,
+      237
+    ]
+  },
+  {
+    "file": "ReferencePanels/UIPanel.png",
+    "source_box": [
+      7,
+      646,
+      448,
+      991
+    ],
+    "transparent": false,
+    "size": [
+      441,
+      345
+    ]
+  },
+  {
+    "file": "ReferencePanels/UIIconsPanel.png",
+    "source_box": [
+      454,
+      715,
+      625,
+      991
+    ],
+    "transparent": false,
+    "size": [
+      171,
+      276
+    ]
+  },
+  {
+    "file": "ReferencePanels/VFXPanel.png",
+    "source_box": [
+      630,
+      715,
+      875,
+      991
+    ],
+    "transparent": false,
+    "size": [
+      245,
+      276
+    ]
+  },
+  {
+    "file": "ReferencePanels/TileExamplePanel.png",
+    "source_box": [
+      881,
+      715,
+      1300,
+      991
+    ],
+    "transparent": false,
+    "size": [
+      419,
+      276
+    ]
+  },
+  {
+    "file": "Character/idle_01.png",
+    "source_box": [
+      64,
+      132,
+      111,
+      181
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      49
+    ]
+  },
+  {
+    "file": "Character/idle_02.png",
+    "source_box": [
+      121,
+      132,
+      169,
+      181
+    ],
+    "transparent": true,
+    "size": [
+      36,
+      49
+    ]
+  },
+  {
+    "file": "Character/idle_03.png",
+    "source_box": [
+      178,
+      132,
+      226,
+      181
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      49
+    ]
+  },
+  {
+    "file": "Character/idle_04.png",
+    "source_box": [
+      235,
+      132,
+      282,
+      181
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      49
+    ]
+  },
+  {
+    "file": "Character/idle_05.png",
+    "source_box": [
+      292,
+      132,
+      340,
+      181
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      49
+    ]
+  },
+  {
+    "file": "Character/run_01.png",
+    "source_box": [
+      64,
+      186,
+      111,
+      233
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      44
+    ]
+  },
+  {
+    "file": "Character/run_02.png",
+    "source_box": [
+      121,
+      186,
+      169,
+      233
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      44
+    ]
+  },
+  {
+    "file": "Character/run_03.png",
+    "source_box": [
+      178,
+      186,
+      226,
+      233
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      44
+    ]
+  },
+  {
+    "file": "Character/run_04.png",
+    "source_box": [
+      235,
+      186,
+      282,
+      233
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      44
+    ]
+  },
+  {
+    "file": "Character/run_05.png",
+    "source_box": [
+      292,
+      186,
+      340,
+      233
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      44
+    ]
+  },
+  {
+    "file": "Character/jump_01.png",
+    "source_box": [
+      64,
+      236,
+      111,
+      282
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      45
+    ]
+  },
+  {
+    "file": "Character/jump_02.png",
+    "source_box": [
+      121,
+      236,
+      169,
+      282
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      45
+    ]
+  },
+  {
+    "file": "Character/jump_03.png",
+    "source_box": [
+      178,
+      236,
+      226,
+      282
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      45
+    ]
+  },
+  {
+    "file": "Character/jump_04.png",
+    "source_box": [
+      235,
+      236,
+      282,
+      282
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      46
+    ]
+  },
+  {
+    "file": "Character/jump_05.png",
+    "source_box": [
+      292,
+      236,
+      340,
+      282
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      45
+    ]
+  },
+  {
+    "file": "Character/fall_01.png",
+    "source_box": [
+      64,
+      286,
+      111,
+      334
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      48
+    ]
+  },
+  {
+    "file": "Character/fall_02.png",
+    "source_box": [
+      121,
+      286,
+      169,
+      334
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      47
+    ]
+  },
+  {
+    "file": "Character/fall_03.png",
+    "source_box": [
+      178,
+      286,
+      226,
+      334
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      47
+    ]
+  },
+  {
+    "file": "Character/fall_04.png",
+    "source_box": [
+      235,
+      286,
+      282,
+      334
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      48
+    ]
+  },
+  {
+    "file": "Character/fall_05.png",
+    "source_box": [
+      292,
+      286,
+      340,
+      334
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      47
+    ]
+  },
+  {
+    "file": "Character/land_01.png",
+    "source_box": [
+      64,
+      338,
+      111,
+      386
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      43
+    ]
+  },
+  {
+    "file": "Character/land_02.png",
+    "source_box": [
+      121,
+      338,
+      169,
+      386
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      42
+    ]
+  },
+  {
+    "file": "Character/land_03.png",
+    "source_box": [
+      178,
+      338,
+      226,
+      386
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      43
+    ]
+  },
+  {
+    "file": "Character/land_04.png",
+    "source_box": [
+      235,
+      338,
+      282,
+      386
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      44
+    ]
+  },
+  {
+    "file": "Character/land_05.png",
+    "source_box": [
+      292,
+      338,
+      340,
+      386
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      43
+    ]
+  },
+  {
+    "file": "Character/attack_01.png",
+    "source_box": [
+      64,
+      390,
+      111,
+      436
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      46
+    ]
+  },
+  {
+    "file": "Character/attack_02.png",
+    "source_box": [
+      121,
+      390,
+      169,
+      436
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      46
+    ]
+  },
+  {
+    "file": "Character/attack_03.png",
+    "source_box": [
+      178,
+      390,
+      226,
+      436
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      46
+    ]
+  },
+  {
+    "file": "Character/attack_04.png",
+    "source_box": [
+      235,
+      390,
+      282,
+      436
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      42
+    ]
+  },
+  {
+    "file": "Character/attack_05.png",
+    "source_box": [
+      292,
+      390,
+      340,
+      436
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      42
+    ]
+  },
+  {
+    "file": "Character/hurt_01.png",
+    "source_box": [
+      64,
+      442,
+      111,
+      489
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      44
+    ]
+  },
+  {
+    "file": "Character/hurt_02.png",
+    "source_box": [
+      121,
+      442,
+      169,
+      489
+    ],
+    "transparent": true,
+    "size": [
+      36,
+      44
+    ]
+  },
+  {
+    "file": "Character/hurt_03.png",
+    "source_box": [
+      178,
+      442,
+      226,
+      489
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      43
+    ]
+  },
+  {
+    "file": "Character/hurt_04.png",
+    "source_box": [
+      235,
+      442,
+      282,
+      489
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      44
+    ]
+  },
+  {
+    "file": "Character/hurt_05.png",
+    "source_box": [
+      292,
+      442,
+      340,
+      489
+    ],
+    "transparent": true,
+    "size": [
+      36,
+      44
+    ]
+  },
+  {
+    "file": "Character/death_01.png",
+    "source_box": [
+      64,
+      493,
+      111,
+      546
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      47
+    ]
+  },
+  {
+    "file": "Character/death_02.png",
+    "source_box": [
+      121,
+      493,
+      169,
+      546
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      47
+    ]
+  },
+  {
+    "file": "Character/death_03.png",
+    "source_box": [
+      178,
+      493,
+      226,
+      546
+    ],
+    "transparent": true,
+    "size": [
+      45,
+      40
+    ]
+  },
+  {
+    "file": "Character/death_04.png",
+    "source_box": [
+      235,
+      493,
+      282,
+      546
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      44
+    ]
+  },
+  {
+    "file": "Character/death_05.png",
+    "source_box": [
+      292,
+      493,
+      340,
+      546
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      44
+    ]
+  },
+  {
+    "file": "Character/dash_01.png",
+    "source_box": [
+      361,
+      151,
+      411,
+      197
+    ],
+    "transparent": true,
+    "size": [
+      48,
+      46
+    ]
+  },
+  {
+    "file": "Character/dash_02.png",
+    "source_box": [
+      412,
+      151,
+      462,
+      197
+    ],
+    "transparent": true,
+    "size": [
+      50,
+      46
+    ]
+  },
+  {
+    "file": "Character/dash_03.png",
+    "source_box": [
+      463,
+      151,
+      509,
+      197
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      46
+    ]
+  },
+  {
+    "file": "Character/wallslide_01.png",
+    "source_box": [
+      361,
+      235,
+      410,
+      285
+    ],
+    "transparent": true,
+    "size": [
+      33,
+      50
+    ]
+  },
+  {
+    "file": "Character/wallslide_02.png",
+    "source_box": [
+      411,
+      235,
+      462,
+      285
+    ],
+    "transparent": true,
+    "size": [
+      34,
+      50
+    ]
+  },
+  {
+    "file": "Character/wallslide_03.png",
+    "source_box": [
+      463,
+      235,
+      509,
+      285
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      50
+    ]
+  },
+  {
+    "file": "Character/climb_01.png",
+    "source_box": [
+      361,
+      327,
+      410,
+      378
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      47
+    ]
+  },
+  {
+    "file": "Character/climb_02.png",
+    "source_box": [
+      411,
+      327,
+      462,
+      378
+    ],
+    "transparent": true,
+    "size": [
+      34,
+      48
+    ]
+  },
+  {
+    "file": "Character/climb_03.png",
+    "source_box": [
+      463,
+      327,
+      509,
+      378
+    ],
+    "transparent": true,
+    "size": [
+      24,
+      48
+    ]
+  },
+  {
+    "file": "Character/push_01.png",
+    "source_box": [
+      361,
+      416,
+      410,
+      466
+    ],
+    "transparent": true,
+    "size": [
+      49,
+      47
+    ]
+  },
+  {
+    "file": "Character/push_02.png",
+    "source_box": [
+      411,
+      416,
+      462,
+      466
+    ],
+    "transparent": true,
+    "size": [
+      51,
+      47
+    ]
+  },
+  {
+    "file": "Character/push_03.png",
+    "source_box": [
+      463,
+      416,
+      509,
+      466
+    ],
+    "transparent": true,
+    "size": [
+      32,
+      47
+    ]
+  },
+  {
+    "file": "Character/crouch_01.png",
+    "source_box": [
+      361,
+      500,
+      410,
+      550
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      39
+    ]
+  },
+  {
+    "file": "Character/crouch_02.png",
+    "source_box": [
+      411,
+      500,
+      462,
+      550
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      39
+    ]
+  },
+  {
+    "file": "Character/crouch_03.png",
+    "source_box": [
+      463,
+      500,
+      509,
+      550
+    ],
+    "transparent": true,
+    "size": [
+      43,
+      30
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_01_01.png",
+    "source_box": [
+      529,
+      68,
+      574,
+      111
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      43
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_01_02.png",
+    "source_box": [
+      581,
+      68,
+      626,
+      111
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      43
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_01_03.png",
+    "source_box": [
+      633,
+      68,
+      681,
+      111
+    ],
+    "transparent": true,
+    "size": [
+      47,
+      43
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_02_01.png",
+    "source_box": [
+      529,
+      118,
+      574,
+      161
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      37
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_02_02.png",
+    "source_box": [
+      581,
+      118,
+      626,
+      161
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      37
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_02_03.png",
+    "source_box": [
+      633,
+      118,
+      681,
+      161
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      37
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_03_01.png",
+    "source_box": [
+      529,
+      170,
+      574,
+      213
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      43
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_03_02.png",
+    "source_box": [
+      581,
+      170,
+      626,
+      213
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      43
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_03_03.png",
+    "source_box": [
+      633,
+      170,
+      681,
+      213
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      43
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_04_01.png",
+    "source_box": [
+      529,
+      222,
+      574,
+      266
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      44
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_04_02.png",
+    "source_box": [
+      581,
+      222,
+      626,
+      266
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      44
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_04_03.png",
+    "source_box": [
+      633,
+      222,
+      681,
+      266
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      44
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_05_01.png",
+    "source_box": [
+      529,
+      274,
+      574,
+      319
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      45
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_05_02.png",
+    "source_box": [
+      581,
+      274,
+      626,
+      319
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      45
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_05_03.png",
+    "source_box": [
+      633,
+      274,
+      681,
+      319
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      45
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_06_01.png",
+    "source_box": [
+      529,
+      326,
+      574,
+      371
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      45
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_06_02.png",
+    "source_box": [
+      581,
+      326,
+      626,
+      371
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      45
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_06_03.png",
+    "source_box": [
+      633,
+      326,
+      681,
+      371
+    ],
+    "transparent": true,
+    "size": [
+      48,
+      45
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_07_01.png",
+    "source_box": [
+      529,
+      378,
+      574,
+      429
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      51
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_07_02.png",
+    "source_box": [
+      581,
+      378,
+      626,
+      429
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      37
+    ]
+  },
+  {
+    "file": "Environment/StoneCliff/stone_07_03.png",
+    "source_box": [
+      633,
+      378,
+      681,
+      429
+    ],
+    "transparent": true,
+    "size": [
+      48,
+      51
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_01_01.png",
+    "source_box": [
+      695,
+      68,
+      743,
+      111
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      43
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_01_02.png",
+    "source_box": [
+      749,
+      68,
+      800,
+      111
+    ],
+    "transparent": true,
+    "size": [
+      47,
+      43
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_02_01.png",
+    "source_box": [
+      695,
+      118,
+      743,
+      161
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      34
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_02_02.png",
+    "source_box": [
+      749,
+      118,
+      800,
+      161
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      34
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_03_01.png",
+    "source_box": [
+      695,
+      170,
+      743,
+      213
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      43
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_03_02.png",
+    "source_box": [
+      749,
+      170,
+      800,
+      213
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      43
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_04_01.png",
+    "source_box": [
+      695,
+      222,
+      743,
+      266
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      44
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_04_02.png",
+    "source_box": [
+      749,
+      222,
+      800,
+      266
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      44
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_05_01.png",
+    "source_box": [
+      695,
+      274,
+      743,
+      319
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      45
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_05_02.png",
+    "source_box": [
+      749,
+      274,
+      800,
+      319
+    ],
+    "transparent": true,
+    "size": [
+      45,
+      45
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_06_01.png",
+    "source_box": [
+      695,
+      326,
+      743,
+      371
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      44
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_06_02.png",
+    "source_box": [
+      749,
+      326,
+      800,
+      371
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      29
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_07_01.png",
+    "source_box": [
+      695,
+      378,
+      743,
+      429
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      51
+    ]
+  },
+  {
+    "file": "Environment/MossGrass/moss_07_02.png",
+    "source_box": [
+      749,
+      378,
+      800,
+      429
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      50
+    ]
+  },
+  {
+    "file": "Environment/Platforms/wood_platform_long.png",
+    "source_box": [
+      826,
+      67,
+      949,
+      96
+    ],
+    "transparent": true,
+    "size": [
+      123,
+      29
+    ]
+  },
+  {
+    "file": "Environment/Platforms/wood_platform_support.png",
+    "source_box": [
+      823,
+      96,
+      948,
+      139
+    ],
+    "transparent": true,
+    "size": [
+      125,
+      43
+    ]
+  },
+  {
+    "file": "Environment/Platforms/ladder_short.png",
+    "source_box": [
+      824,
+      133,
+      856,
+      222
+    ],
+    "transparent": true,
+    "size": [
+      32,
+      83
+    ]
+  },
+  {
+    "file": "Environment/Platforms/scaffold_vertical.png",
+    "source_box": [
+      858,
+      142,
+      905,
+      251
+    ],
+    "transparent": true,
+    "size": [
+      45,
+      109
+    ]
+  },
+  {
+    "file": "Environment/Platforms/rope_vertical.png",
+    "source_box": [
+      914,
+      136,
+      939,
+      332
+    ],
+    "transparent": true,
+    "size": [
+      13,
+      196
+    ]
+  },
+  {
+    "file": "Environment/Platforms/platform_mid_01.png",
+    "source_box": [
+      817,
+      246,
+      861,
+      300
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      54
+    ]
+  },
+  {
+    "file": "Environment/Platforms/platform_mid_02.png",
+    "source_box": [
+      859,
+      250,
+      910,
+      331
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      81
+    ]
+  },
+  {
+    "file": "Environment/Platforms/hanging_platform.png",
+    "source_box": [
+      907,
+      242,
+      958,
+      343
+    ],
+    "transparent": true,
+    "size": [
+      42,
+      101
+    ]
+  },
+  {
+    "file": "Environment/Platforms/scaffold_large.png",
+    "source_box": [
+      816,
+      340,
+      958,
+      430
+    ],
+    "transparent": true,
+    "size": [
+      139,
+      90
+    ]
+  },
+  {
+    "file": "Environment/Special/spikes_small.png",
+    "source_box": [
+      965,
+      72,
+      1025,
+      103
+    ],
+    "transparent": true,
+    "size": [
+      54,
+      27
+    ]
+  },
+  {
+    "file": "Environment/Special/spikes_long.png",
+    "source_box": [
+      966,
+      105,
+      1030,
+      137
+    ],
+    "transparent": true,
+    "size": [
+      59,
+      21
+    ]
+  },
+  {
+    "file": "Environment/Special/rocks.png",
+    "source_box": [
+      962,
+      143,
+      1045,
+      193
+    ],
+    "transparent": true,
+    "size": [
+      68,
+      44
+    ]
+  },
+  {
+    "file": "Environment/Special/wood_beam.png",
+    "source_box": [
+      963,
+      194,
+      1048,
+      233
+    ],
+    "transparent": true,
+    "size": [
+      69,
+      39
+    ]
+  },
+  {
+    "file": "Environment/Special/scaffold_small.png",
+    "source_box": [
+      962,
+      232,
+      1047,
+      332
+    ],
+    "transparent": true,
+    "size": [
+      70,
+      100
+    ]
+  },
+  {
+    "file": "Environment/Special/crate_01.png",
+    "source_box": [
+      963,
+      338,
+      1006,
+      382
+    ],
+    "transparent": true,
+    "size": [
+      33,
+      44
+    ]
+  },
+  {
+    "file": "Environment/Special/crate_02.png",
+    "source_box": [
+      1008,
+      338,
+      1050,
+      382
+    ],
+    "transparent": true,
+    "size": [
+      32,
+      33
+    ]
+  },
+  {
+    "file": "Environment/Special/cage.png",
+    "source_box": [
+      961,
+      382,
+      1001,
+      428
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      35
+    ]
+  },
+  {
+    "file": "Environment/Special/barrel.png",
+    "source_box": [
+      1000,
+      382,
+      1030,
+      428
+    ],
+    "transparent": true,
+    "size": [
+      30,
+      34
+    ]
+  },
+  {
+    "file": "Environment/Special/rock_small.png",
+    "source_box": [
+      1028,
+      382,
+      1052,
+      428
+    ],
+    "transparent": true,
+    "size": [
+      13,
+      24
+    ]
+  },
+  {
+    "file": "Background/Layer_04_Sky.png",
+    "source_box": [
+      1071,
+      44,
+      1453,
+      135
+    ],
+    "transparent": false,
+    "size": [
+      382,
+      91
+    ]
+  },
+  {
+    "file": "Background/Layer_03_Far.png",
+    "source_box": [
+      1071,
+      142,
+      1453,
+      239
+    ],
+    "transparent": false,
+    "size": [
+      382,
+      97
+    ]
+  },
+  {
+    "file": "Background/Layer_02_Mid.png",
+    "source_box": [
+      1071,
+      246,
+      1453,
+      337
+    ],
+    "transparent": false,
+    "size": [
+      382,
+      91
+    ]
+  },
+  {
+    "file": "Background/Layer_01_Near.png",
+    "source_box": [
+      1071,
+      343,
+      1453,
+      429
+    ],
+    "transparent": false,
+    "size": [
+      382,
+      86
+    ]
+  },
+  {
+    "file": "Props/banner_red_01.png",
+    "source_box": [
+      528,
+      478,
+      567,
+      573
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      90
+    ]
+  },
+  {
+    "file": "Props/banner_red_02.png",
+    "source_box": [
+      568,
+      478,
+      608,
+      573
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      90
+    ]
+  },
+  {
+    "file": "Props/rope_bundle.png",
+    "source_box": [
+      608,
+      478,
+      648,
+      563
+    ],
+    "transparent": true,
+    "size": [
+      40,
+      81
+    ]
+  },
+  {
+    "file": "Props/lantern_hanging_01.png",
+    "source_box": [
+      645,
+      477,
+      678,
+      560
+    ],
+    "transparent": true,
+    "size": [
+      33,
+      78
+    ]
+  },
+  {
+    "file": "Props/lantern_hanging_02.png",
+    "source_box": [
+      676,
+      477,
+      712,
+      560
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      78
+    ]
+  },
+  {
+    "file": "Props/statue.png",
+    "source_box": [
+      710,
+      476,
+      764,
+      590
+    ],
+    "transparent": true,
+    "size": [
+      54,
+      114
+    ]
+  },
+  {
+    "file": "Props/statue_arch.png",
+    "source_box": [
+      766,
+      476,
+      851,
+      592
+    ],
+    "transparent": true,
+    "size": [
+      85,
+      115
+    ]
+  },
+  {
+    "file": "Props/barrel_01.png",
+    "source_box": [
+      528,
+      584,
+      565,
+      634
+    ],
+    "transparent": true,
+    "size": [
+      32,
+      37
+    ]
+  },
+  {
+    "file": "Props/signpost_01.png",
+    "source_box": [
+      565,
+      565,
+      613,
+      631
+    ],
+    "transparent": true,
+    "size": [
+      48,
+      63
+    ]
+  },
+  {
+    "file": "Props/signpost_02.png",
+    "source_box": [
+      610,
+      565,
+      668,
+      630
+    ],
+    "transparent": true,
+    "size": [
+      53,
+      64
+    ]
+  },
+  {
+    "file": "Props/torch_standing.png",
+    "source_box": [
+      668,
+      534,
+      706,
+      631
+    ],
+    "transparent": true,
+    "size": [
+      31,
+      94
+    ]
+  },
+  {
+    "file": "Props/skull.png",
+    "source_box": [
+      704,
+      597,
+      739,
+      638
+    ],
+    "transparent": true,
+    "size": [
+      24,
+      24
+    ]
+  },
+  {
+    "file": "Props/vegetation_cluster.png",
+    "source_box": [
+      736,
+      584,
+      812,
+      666
+    ],
+    "transparent": true,
+    "size": [
+      76,
+      82
+    ]
+  },
+  {
+    "file": "Props/pillar_moss.png",
+    "source_box": [
+      810,
+      584,
+      851,
+      670
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      85
+    ]
+  },
+  {
+    "file": "Props/crate.png",
+    "source_box": [
+      525,
+      653,
+      568,
+      700
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      45
+    ]
+  },
+  {
+    "file": "Props/pole_small.png",
+    "source_box": [
+      567,
+      648,
+      605,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      50
+    ]
+  },
+  {
+    "file": "Props/barrel_02.png",
+    "source_box": [
+      606,
+      646,
+      643,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      52
+    ]
+  },
+  {
+    "file": "Props/signboard.png",
+    "source_box": [
+      642,
+      640,
+      701,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      59,
+      58
+    ]
+  },
+  {
+    "file": "Props/flowers_red.png",
+    "source_box": [
+      696,
+      644,
+      744,
+      702
+    ],
+    "transparent": true,
+    "size": [
+      48,
+      54
+    ]
+  },
+  {
+    "file": "Props/flowers_white.png",
+    "source_box": [
+      739,
+      644,
+      789,
+      702
+    ],
+    "transparent": true,
+    "size": [
+      50,
+      53
+    ]
+  },
+  {
+    "file": "Props/bush.png",
+    "source_box": [
+      785,
+      638,
+      850,
+      702
+    ],
+    "transparent": true,
+    "size": [
+      65,
+      59
+    ]
+  },
+  {
+    "file": "NPCEnemies/knight_sword.png",
+    "source_box": [
+      880,
+      478,
+      950,
+      564
+    ],
+    "transparent": true,
+    "size": [
+      70,
+      69
+    ]
+  },
+  {
+    "file": "NPCEnemies/knight_shield.png",
+    "source_box": [
+      955,
+      475,
+      1030,
+      566
+    ],
+    "transparent": true,
+    "size": [
+      75,
+      83
+    ]
+  },
+  {
+    "file": "NPCEnemies/knight_idle.png",
+    "source_box": [
+      1033,
+      478,
+      1119,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      61,
+      68
+    ]
+  },
+  {
+    "file": "NPCEnemies/mage_01.png",
+    "source_box": [
+      882,
+      565,
+      950,
+      644
+    ],
+    "transparent": true,
+    "size": [
+      68,
+      75
+    ]
+  },
+  {
+    "file": "NPCEnemies/mage_02.png",
+    "source_box": [
+      955,
+      565,
+      1027,
+      644
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      60
+    ]
+  },
+  {
+    "file": "NPCEnemies/raven.png",
+    "source_box": [
+      1028,
+      560,
+      1117,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      59,
+      69
+    ]
+  },
+  {
+    "file": "NPCEnemies/bird_01.png",
+    "source_box": [
+      876,
+      635,
+      922,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      45,
+      59
+    ]
+  },
+  {
+    "file": "NPCEnemies/bird_02.png",
+    "source_box": [
+      918,
+      643,
+      965,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      47,
+      49
+    ]
+  },
+  {
+    "file": "NPCEnemies/bird_03.png",
+    "source_box": [
+      961,
+      644,
+      1008,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      47,
+      32
+    ]
+  },
+  {
+    "file": "NPCEnemies/bird_04.png",
+    "source_box": [
+      1006,
+      642,
+      1056,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      50,
+      34
+    ]
+  },
+  {
+    "file": "NPCEnemies/bird_05.png",
+    "source_box": [
+      1052,
+      638,
+      1120,
+      701
+    ],
+    "transparent": true,
+    "size": [
+      68,
+      50
+    ]
+  },
+  {
+    "file": "Effects/slash_01.png",
+    "source_box": [
+      1150,
+      486,
+      1210,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      56,
+      53
+    ]
+  },
+  {
+    "file": "Effects/slash_02.png",
+    "source_box": [
+      1150,
+      570,
+      1210,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      50,
+      44
+    ]
+  },
+  {
+    "file": "Effects/hit_01.png",
+    "source_box": [
+      1210,
+      486,
+      1267,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      49,
+      52
+    ]
+  },
+  {
+    "file": "Effects/hit_02.png",
+    "source_box": [
+      1210,
+      570,
+      1267,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      57
+    ]
+  },
+  {
+    "file": "Effects/dust_01.png",
+    "source_box": [
+      1267,
+      486,
+      1322,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      41,
+      53
+    ]
+  },
+  {
+    "file": "Effects/dust_02.png",
+    "source_box": [
+      1267,
+      570,
+      1322,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      44,
+      47
+    ]
+  },
+  {
+    "file": "Effects/landing_01.png",
+    "source_box": [
+      1322,
+      486,
+      1375,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      38,
+      73
+    ]
+  },
+  {
+    "file": "Effects/landing_02.png",
+    "source_box": [
+      1322,
+      570,
+      1375,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      30,
+      43
+    ]
+  },
+  {
+    "file": "Effects/fall_01.png",
+    "source_box": [
+      1375,
+      486,
+      1428,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      52,
+      57
+    ]
+  },
+  {
+    "file": "Effects/fall_02.png",
+    "source_box": [
+      1375,
+      570,
+      1428,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      53,
+      46
+    ]
+  },
+  {
+    "file": "Effects/jump_01.png",
+    "source_box": [
+      1428,
+      486,
+      1474,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      52
+    ]
+  },
+  {
+    "file": "Effects/jump_02.png",
+    "source_box": [
+      1428,
+      570,
+      1474,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      32,
+      34
+    ]
+  },
+  {
+    "file": "Effects/dash_01.png",
+    "source_box": [
+      1464,
+      486,
+      1510,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      46,
+      53
+    ]
+  },
+  {
+    "file": "Effects/dash_02.png",
+    "source_box": [
+      1464,
+      570,
+      1510,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      43
+    ]
+  },
+  {
+    "file": "Effects/death_01.png",
+    "source_box": [
+      1480,
+      486,
+      1528,
+      565
+    ],
+    "transparent": true,
+    "size": [
+      39,
+      53
+    ]
+  },
+  {
+    "file": "Effects/death_02.png",
+    "source_box": [
+      1480,
+      570,
+      1528,
+      645
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      43
+    ]
+  },
+  {
+    "file": "UI/Buttons/start_journey.png",
+    "source_box": [
+      17,
+      687,
+      210,
+      733
+    ],
+    "transparent": true,
+    "size": [
+      193,
+      45
+    ]
+  },
+  {
+    "file": "UI/Buttons/settings.png",
+    "source_box": [
+      17,
+      741,
+      210,
+      782
+    ],
+    "transparent": true,
+    "size": [
+      186,
+      41
+    ]
+  },
+  {
+    "file": "UI/Buttons/achievements.png",
+    "source_box": [
+      17,
+      791,
+      210,
+      834
+    ],
+    "transparent": true,
+    "size": [
+      186,
+      41
+    ]
+  },
+  {
+    "file": "UI/Buttons/quit.png",
+    "source_box": [
+      17,
+      842,
+      210,
+      883
+    ],
+    "transparent": true,
+    "size": [
+      186,
+      40
+    ]
+  },
+  {
+    "file": "UI/Buttons/icon_settings.png",
+    "source_box": [
+      223,
+      680,
+      271,
+      731
+    ],
+    "transparent": true,
+    "size": [
+      48,
+      49
+    ]
+  },
+  {
+    "file": "UI/Buttons/icon_pause.png",
+    "source_box": [
+      280,
+      680,
+      329,
+      731
+    ],
+    "transparent": true,
+    "size": [
+      49,
+      49
+    ]
+  },
+  {
+    "file": "UI/Buttons/icon_close.png",
+    "source_box": [
+      339,
+      680,
+      389,
+      731
+    ],
+    "transparent": true,
+    "size": [
+      47,
+      49
+    ]
+  },
+  {
+    "file": "UI/HUD/timer_icon.png",
+    "source_box": [
+      223,
+      788,
+      262,
+      826
+    ],
+    "transparent": true,
+    "size": [
+      29,
+      34
+    ]
+  },
+  {
+    "file": "UI/HUD/mountain_meter.png",
+    "source_box": [
+      263,
+      785,
+      424,
+      829
+    ],
+    "transparent": true,
+    "size": [
+      152,
+      31
+    ]
+  },
+  {
+    "file": "UI/HUD/charge_bar.png",
+    "source_box": [
+      219,
+      833,
+      428,
+      868
+    ],
+    "transparent": true,
+    "size": [
+      209,
+      32
+    ]
+  },
+  {
+    "file": "UI/HUD/blank_panel.png",
+    "source_box": [
+      17,
+      890,
+      176,
+      980
+    ],
+    "transparent": true,
+    "size": [
+      154,
+      86
+    ]
+  },
+  {
+    "file": "UI/HUD/height_best_panel.png",
+    "source_box": [
+      185,
+      890,
+      429,
+      981
+    ],
+    "transparent": true,
+    "size": [
+      242,
+      70
+    ]
+  },
+  {
+    "file": "UI/Hearts/heart_01.png",
+    "source_box": [
+      226,
+      744,
+      255,
+      780
+    ],
+    "transparent": true,
+    "size": [
+      29,
+      30
+    ]
+  },
+  {
+    "file": "UI/Hearts/heart_02.png",
+    "source_box": [
+      257,
+      744,
+      287,
+      780
+    ],
+    "transparent": true,
+    "size": [
+      25,
+      30
+    ]
+  },
+  {
+    "file": "UI/Hearts/heart_03.png",
+    "source_box": [
+      289,
+      744,
+      319,
+      780
+    ],
+    "transparent": true,
+    "size": [
+      30,
+      30
+    ]
+  },
+  {
+    "file": "UI/Hearts/heart_04.png",
+    "source_box": [
+      330,
+      744,
+      360,
+      780
+    ],
+    "transparent": true,
+    "size": [
+      26,
+      30
+    ]
+  },
+  {
+    "file": "UI/Hearts/heart_05.png",
+    "source_box": [
+      365,
+      744,
+      397,
+      780
+    ],
+    "transparent": true,
+    "size": [
+      32,
+      30
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_01.png",
+    "source_box": [
+      457,
+      750,
+      492,
+      786
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_02.png",
+    "source_box": [
+      497,
+      750,
+      534,
+      786
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_03.png",
+    "source_box": [
+      539,
+      750,
+      576,
+      786
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_04.png",
+    "source_box": [
+      581,
+      750,
+      619,
+      786
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_05.png",
+    "source_box": [
+      457,
+      793,
+      492,
+      829
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_06.png",
+    "source_box": [
+      497,
+      793,
+      534,
+      829
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_07.png",
+    "source_box": [
+      539,
+      793,
+      576,
+      829
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_08.png",
+    "source_box": [
+      581,
+      793,
+      619,
+      829
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      36
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_09.png",
+    "source_box": [
+      457,
+      835,
+      492,
+      873
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      35
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_10.png",
+    "source_box": [
+      497,
+      835,
+      534,
+      873
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      35
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_11.png",
+    "source_box": [
+      539,
+      835,
+      576,
+      873
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      35
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_12.png",
+    "source_box": [
+      581,
+      835,
+      619,
+      873
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      35
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_13.png",
+    "source_box": [
+      457,
+      878,
+      492,
+      916
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      32
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_14.png",
+    "source_box": [
+      497,
+      878,
+      534,
+      916
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      33
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_15.png",
+    "source_box": [
+      539,
+      878,
+      576,
+      916
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      33
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_16.png",
+    "source_box": [
+      581,
+      878,
+      619,
+      916
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      33
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_17.png",
+    "source_box": [
+      457,
+      923,
+      492,
+      962
+    ],
+    "transparent": true,
+    "size": [
+      35,
+      33
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_18.png",
+    "source_box": [
+      497,
+      923,
+      534,
+      962
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      33
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_19.png",
+    "source_box": [
+      539,
+      923,
+      576,
+      962
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      33
+    ]
+  },
+  {
+    "file": "UI/Icons/icon_20.png",
+    "source_box": [
+      581,
+      923,
+      619,
+      962
+    ],
+    "transparent": true,
+    "size": [
+      37,
+      33
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_01.png",
+    "source_box": [
+      643,
+      744,
+      670,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      27,
+      48
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_02.png",
+    "source_box": [
+      671,
+      744,
+      699,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      17,
+      47
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_03.png",
+    "source_box": [
+      700,
+      744,
+      728,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      39
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_04.png",
+    "source_box": [
+      729,
+      744,
+      757,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      44
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_05.png",
+    "source_box": [
+      758,
+      744,
+      786,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      45
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_06.png",
+    "source_box": [
+      787,
+      744,
+      815,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      43
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_07.png",
+    "source_box": [
+      816,
+      744,
+      844,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      38
+    ]
+  },
+  {
+    "file": "VFX/row_01_frame_08.png",
+    "source_box": [
+      845,
+      744,
+      872,
+      799
+    ],
+    "transparent": true,
+    "size": [
+      8,
+      25
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_01.png",
+    "source_box": [
+      643,
+      800,
+      670,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      24,
+      40
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_02.png",
+    "source_box": [
+      671,
+      800,
+      699,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      38
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_03.png",
+    "source_box": [
+      700,
+      800,
+      728,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      26,
+      20
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_04.png",
+    "source_box": [
+      729,
+      800,
+      757,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      16
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_05.png",
+    "source_box": [
+      758,
+      800,
+      786,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      18,
+      20
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_06.png",
+    "source_box": [
+      787,
+      800,
+      815,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      23
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_07.png",
+    "source_box": [
+      816,
+      800,
+      844,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      21,
+      19
+    ]
+  },
+  {
+    "file": "VFX/row_02_frame_08.png",
+    "source_box": [
+      845,
+      800,
+      872,
+      845
+    ],
+    "transparent": true,
+    "size": [
+      9,
+      6
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_01.png",
+    "source_box": [
+      643,
+      846,
+      670,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      22,
+      45
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_02.png",
+    "source_box": [
+      671,
+      846,
+      699,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      20,
+      45
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_03.png",
+    "source_box": [
+      700,
+      846,
+      728,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      32
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_04.png",
+    "source_box": [
+      729,
+      846,
+      757,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      23
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_05.png",
+    "source_box": [
+      758,
+      846,
+      786,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      27
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_06.png",
+    "source_box": [
+      787,
+      846,
+      815,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      27,
+      23
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_07.png",
+    "source_box": [
+      816,
+      846,
+      844,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      40
+    ]
+  },
+  {
+    "file": "VFX/row_03_frame_08.png",
+    "source_box": [
+      845,
+      846,
+      872,
+      891
+    ],
+    "transparent": true,
+    "size": [
+      10,
+      32
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_01.png",
+    "source_box": [
+      643,
+      892,
+      670,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      26,
+      46
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_02.png",
+    "source_box": [
+      671,
+      892,
+      699,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      16,
+      17
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_03.png",
+    "source_box": [
+      700,
+      892,
+      728,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      45
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_04.png",
+    "source_box": [
+      729,
+      892,
+      757,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      16
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_05.png",
+    "source_box": [
+      758,
+      892,
+      786,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      24,
+      17
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_06.png",
+    "source_box": [
+      787,
+      892,
+      815,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      23,
+      45
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_07.png",
+    "source_box": [
+      816,
+      892,
+      844,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      20
+    ]
+  },
+  {
+    "file": "VFX/row_04_frame_08.png",
+    "source_box": [
+      845,
+      892,
+      872,
+      938
+    ],
+    "transparent": true,
+    "size": [
+      26,
+      46
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_01.png",
+    "source_box": [
+      643,
+      939,
+      670,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      27,
+      35
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_02.png",
+    "source_box": [
+      671,
+      939,
+      699,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      20,
+      35
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_03.png",
+    "source_box": [
+      700,
+      939,
+      728,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      26,
+      32
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_04.png",
+    "source_box": [
+      729,
+      939,
+      757,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      34
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_05.png",
+    "source_box": [
+      758,
+      939,
+      786,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      26
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_06.png",
+    "source_box": [
+      787,
+      939,
+      815,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      33
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_07.png",
+    "source_box": [
+      816,
+      939,
+      844,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      28,
+      28
+    ]
+  },
+  {
+    "file": "VFX/row_05_frame_08.png",
+    "source_box": [
+      845,
+      939,
+      872,
+      988
+    ],
+    "transparent": true,
+    "size": [
+      27,
+      47
+    ]
+  }
+]

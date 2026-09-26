@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 1531568facd48ca4a81bf3409948c2a6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6853920644089043660
+    second: fantasy_adventurer_pixel_sprite_sheet_0
+  - first:
+      213: 4389924805205839058
+    second: fantasy_adventurer_pixel_sprite_sheet_1
+  - first:
+      213: -1390998867878994870
+    second: fantasy_adventurer_pixel_sprite_sheet_2
+  - first:
+      213: -4623072314603350147
+    second: fantasy_adventurer_pixel_sprite_sheet_3
+  - first:
+      213: 2233592036543664310
+    second: fantasy_adventurer_pixel_sprite_sheet_4
+  - first:
+      213: 188129454216277891
+    second: fantasy_adventurer_pixel_sprite_sheet_5
+  - first:
+      213: 1357071134889460260
+    second: fantasy_adventurer_pixel_sprite_sheet_6
+  - first:
+      213: 1048515494844434608
+    second: fantasy_adventurer_pixel_sprite_sheet_7
+  - first:
+      213: 6468495101277581547
+    second: fantasy_adventurer_pixel_sprite_sheet_8
+  - first:
+      213: 5069496804450345099
+    second: fantasy_adventurer_pixel_sprite_sheet_9
+  - first:
+      213: -9112335085964374838
+    second: fantasy_adventurer_pixel_sprite_sheet_10
+  - first:
+      213: -9187016190546769831
+    second: fantasy_adventurer_pixel_sprite_sheet_11
+  - first:
+      213: 3757717378210523188
+    second: fantasy_adventurer_pixel_sprite_sheet_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 657
+        width: 323
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccad4ad13840e1f50800000000000000
+      internalID: 6853920644089043660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 653
+        width: 355
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc48fcf9552cec30800000000000000
+      internalID: 4389924805205839058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 607
+        width: 373
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c1a1546ed22bce0800000000000000
+      internalID: -1390998867878994870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 357
+        width: 355
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77df15593c87dfb0800000000000000
+      internalID: -4623072314603350147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 661
+        width: 333
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b093578f105ffe10800000000000000
+      internalID: 2233592036543664310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 33
+        width: 359
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f695aedbe5c9200800000000000000
+      internalID: 188129454216277891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 625
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 422c502d10945d210800000000000000
+      internalID: 1357071134889460260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 281
+        width: 371
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b802bb89431d8e00800000000000000
+      internalID: 1048515494844434608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 361
+        width: 302
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be03107e506b4c950800000000000000
+      internalID: 6468495101277581547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 45
+        width: 335
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80ad3bfb787a5640800000000000000
+      internalID: 5069496804450345099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 45
+        width: 331
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: accc3ceb48b7a8180800000000000000
+      internalID: -9112335085964374838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 65
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95882b81379218080800000000000000
+      internalID: -9187016190546769831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fantasy_adventurer_pixel_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 45
+        width: 323
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438ec86db08162430800000000000000
+      internalID: 3757717378210523188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
