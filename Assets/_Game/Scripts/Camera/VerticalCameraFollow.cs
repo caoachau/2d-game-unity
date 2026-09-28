@@ -11,6 +11,23 @@ namespace Summit.Game.Camera
         [SerializeField] private bool lockHorizontal;
 
         private Vector3 velocity;
+        private Vector3 shakeOffset;
+        private float shakeRemaining;
+        private float shakeStrength;
+        private const float ShakeDuration = .18f;
+
+        public void Shake(float strength)
+        {
+            shakeStrength = Mathf.Max(shakeStrength, strength);
+            shakeRemaining = ShakeDuration;
+        }
+
+        public void CancelShake()
+        {
+            transform.position -= shakeOffset;
+            shakeOffset = Vector3.zero;
+            shakeRemaining = shakeStrength = 0f;
+        }
 
         public void Initialize(Transform followTarget)
         {
@@ -20,17 +37,22 @@ namespace Summit.Game.Camera
 
         private void LateUpdate()
         {
-            if (target == null)
+            if (target == null || Time.timeScale <= 0f)
             {
                 return;
             }
 
-            Vector3 position = transform.position;
+            Vector3 position = transform.position - shakeOffset;
             float desiredX = lockHorizontal ? position.x : target.position.x + framingOffset.x;
             float desiredY = target.position.y + framingOffset.y;
             float smoothTime = desiredY < position.y ? fallSmoothTime : riseSmoothTime;
             Vector3 desired = new(desiredX, desiredY, position.z);
-            transform.position = Vector3.SmoothDamp(position, desired, ref velocity, smoothTime);
+            shakeRemaining = Mathf.Max(0f, shakeRemaining - Time.deltaTime);
+            shakeOffset = shakeRemaining > 0f
+                ? (Vector3)(Random.insideUnitCircle * (shakeStrength * shakeRemaining / ShakeDuration))
+                : Vector3.zero;
+            if (shakeRemaining <= 0f) shakeStrength = 0f;
+            transform.position = Vector3.SmoothDamp(position, desired, ref velocity, smoothTime) + shakeOffset;
         }
 
         public void SnapToTarget()
@@ -43,6 +65,8 @@ namespace Summit.Game.Camera
             transform.position = new Vector3(target.position.x + framingOffset.x,
                 target.position.y + framingOffset.y, transform.position.z);
             velocity = Vector3.zero;
+            shakeOffset = Vector3.zero;
+            shakeRemaining = shakeStrength = 0f;
         }
     }
 }

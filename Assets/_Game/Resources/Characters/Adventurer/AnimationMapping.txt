@@ -1,0 +1,15 @@
+Supplied Adventurer sprites
+
+Shared PlayerVisualController uses this resource folder in all three gameplay scenes.
+Idle: jump_vertical_01 (the pack has no separate idle loop).
+Charge: jump_vertical_10, 11.
+Jump ascent: jump_vertical_05, 06, 07; hold last pose until falling.
+Fall: jump_vertical_08, 09; hold last pose until landing.
+Landing: jump_vertical_10, 11, 12.
+Run: run_01 through run_05, loop. Enable Use Alternate Run for run_alt_01 through 05.
+Climb up: climb_up_01 through 05, loop while moving.
+Descend ladder: slide_down_01 through 05, loop while moving.
+Pausing or hanging on the ladder freezes the current frame.
+
+The supplied jump_vertical_02, 03 and 04 contain neighbouring characters from the original sheet; preserved but excluded from playback. Supply corrected exports to restore these poses.
+PNG files are unchanged. Sprite rectangles trim transparent margins; per-action pixels-per-unit normalizes scale without stretching poses. Unlit material preserves source colours and alpha.

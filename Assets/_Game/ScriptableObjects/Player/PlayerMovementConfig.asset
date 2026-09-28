@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6516116d5fc3c084b8dffc7bed66f823, type: 3}
   m_Name: PlayerMovementConfig
   m_EditorClassIdentifier: Summit.Game::Summit.Game.Configuration.PlayerMovementConfig
-  minJumpVelocity: 10
-  maxJumpVelocity: 25
+  minJumpVelocity: 8
+  maxJumpVelocity: 20
   maxChargeDuration: 1.15
   horizontalJumpVelocity: 10
   jumpChargeCurve:

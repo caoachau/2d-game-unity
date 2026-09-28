@@ -41,6 +41,22 @@ namespace Summit.Game.Player
             moveInput = Mathf.Clamp(horizontalInput, -1f, 1f);
         }
 
+        public void SetClimbingVelocity(float verticalInput, float climbSpeed)
+        {
+            body.gravityScale = 0f;
+            body.linearVelocity = new Vector2(0f, Mathf.Clamp(verticalInput, -1f, 1f) * climbSpeed);
+        }
+
+        public void StopClimbing()
+        {
+            if (config != null)
+            {
+                body.gravityScale = config.GravityScale;
+            }
+
+            body.linearVelocity = Vector2.zero;
+        }
+
         public void TickPhysics(bool isGrounded)
         {
             if (config == null)

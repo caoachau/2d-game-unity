@@ -5,21 +5,31 @@ namespace Summit.Game.Services
 {
     public sealed class UnitySceneService : ISceneService
     {
+        private readonly string gameplayScene;
+
+        public UnitySceneService(string levelScene = null)
+        {
+            gameplayScene = levelScene;
+        }
+
         public void StartGame()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Area2_Cave");
+            AudioListener.pause = false;
+            SceneManager.LoadScene("Area_1_Forest");
         }
 
         public void RestartGame()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            AudioListener.pause = false;
+            SceneManager.LoadScene(gameplayScene ?? SceneManager.GetActiveScene().name);
         }
 
         public void LoadMainMenu()
         {
             Time.timeScale = 1f;
+            AudioListener.pause = false;
             SceneManager.LoadScene("MainMenu");
         }
 

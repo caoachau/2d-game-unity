@@ -52,16 +52,69 @@ namespace Summit.Game.UI
         private int successfulJumps;
         private int dialogueStep;
         private bool storyMode;
+        private bool initialized;
+        private bool layoutBound;
+        private bool authoredHeightLabels;
+        private Image moveHintImage;
+        private Image jumpHintImage;
+        private Color moveHintColor;
+        private Color jumpHintColor;
+        private Input.PlayerInputReader hintInput;
+
+        public bool IsInitialized => initialized;
+        public bool IsFinished => storyMode;
+
+        public void BindAuthoredLayout()
+        {
+            if (layoutBound) return;
+            layoutBound = true;
+            Canvas.ForceUpdateCanvases();
+            RectTransform height = AuthoredHudLayout.FindPanel(this, "01_height_best_panel");
+            if (height != null)
+            {
+                currentHeightText = AuthoredHudLayout.AddText(height, "CurrentHeightValue",
+                    new Vector2(.68f, .53f), new Vector2(.93f, .88f));
+                bestHeightText = AuthoredHudLayout.AddText(height, "BestHeightValue",
+                    new Vector2(.68f, .13f), new Vector2(.93f, .48f));
+                authoredHeightLabels = true;
+            }
+            RectTransform time = AuthoredHudLayout.FindPanel(this, "02_timer_panel");
+            if (time != null)
+                timerText = AuthoredHudLayout.AddText(time, "TimerValue",
+                    new Vector2(.28f, .16f), new Vector2(.91f, .84f), TextAnchor.MiddleCenter);
+            RectTransform charge = AuthoredHudLayout.FindPanel(this, "05_charge", "ui_015");
+            if (charge != null)
+            {
+                chargeRoot = charge.gameObject;
+                chargeSlider = AuthoredHudLayout.AddChargeSlider(charge);
+            }
+            RectTransform move = AuthoredHudLayout.FindPanel(this, "03_move_panel");
+            RectTransform jump = AuthoredHudLayout.FindPanel(this, "04_jump_panel");
+            if (move != null)
+            {
+                moveHintImage = move.GetComponent<Image>();
+                moveHintColor = moveHintImage.color;
+            }
+            if (jump != null)
+            {
+                jumpHintImage = jump.GetComponent<Image>();
+                jumpHintColor = jumpHintImage.color;
+            }
+        }
 
         public void Initialize(PlayerJumpController jump, GameProgressTracker progress, GameRunTimer timer,
             IPauseService pause, ISceneService scenes, ISettingsService settings)
         {
+            if (initialized) return;
+            BindAuthoredLayout();
+            initialized = true;
             jumpController = jump;
             progressTracker = progress;
             runTimer = timer;
             pauseService = pause;
             sceneService = scenes;
             settingsService = settings;
+            hintInput = SharedLevelHud.FindInScene<Input.PlayerInputReader>(gameObject.scene);
 
             jumpController.ChargeChanged += HandleChargeChanged;
             jumpController.Jumped += HandleJumped;
@@ -70,7 +123,7 @@ namespace Summit.Game.UI
             pauseService.PauseChanged += HandlePauseChanged;
             settingsService.SettingsChanged += HandleSettingsChanged;
 
-            pauseButton.onClick.AddListener(pauseService.Toggle);
+            pauseButton.onClick.AddListener(TogglePause);
             hudSettingsButton.onClick.AddListener(OpenSettingsFromHud);
             resumeButton.onClick.AddListener(pauseService.Resume);
             restartButton.onClick.AddListener(sceneService.RestartGame);
@@ -86,10 +139,37 @@ namespace Summit.Game.UI
             cutscenePanel.SetActive(false);
             victoryPanel.SetActive(false);
             settingsPanel.gameObject.SetActive(false);
-            chargeSlider.value = 0f;
+            HandleChargeChanged(jump.NormalizedCharge);
             HandleProgressChanged(progress.CurrentHeight, progress.HighestHeight, progress.BestHeight);
-            HandleTimeChanged(0f);
+            HandleTimeChanged(timer.ElapsedSeconds);
             HandleSettingsChanged();
+            HandlePauseChanged(pause.IsPaused);
+        }
+
+        private void Update()
+        {
+            if (!initialized) return;
+            Input.PlayerInputReader input = hintInput;
+            if (moveHintImage != null)
+                moveHintImage.color = input != null && !pauseService.IsPaused &&
+                    (Mathf.Abs(input.Horizontal) > .1f || Mathf.Abs(input.Vertical) > .1f)
+                    ? moveHintColor * new Color(1f, 1f, .65f, 1f) : moveHintColor;
+            if (jumpHintImage != null)
+                jumpHintImage.color = input != null && !pauseService.IsPaused && input.JumpHeld
+                    ? jumpHintColor * new Color(1f, 1f, .65f, 1f) : jumpHintColor;
+        }
+
+        public void TogglePause()
+        {
+            if (!initialized || storyMode) return;
+            if (settingsPanel.gameObject.activeSelf)
+            {
+                settingsPanel.Hide();
+                pausePanel.SetActive(false);
+                pauseService.Resume();
+                return;
+            }
+            pauseService.Toggle();
         }
 
         private void OnDestroy()
@@ -108,6 +188,7 @@ namespace Summit.Game.UI
 
         public void ShowCutscene()
         {
+            if (!initialized) return;
             storyMode = true;
             dialogueStep = 0;
             dialogueNameText.text = "Princess Elira";
@@ -121,13 +202,13 @@ namespace Summit.Game.UI
 
         private void HandleChargeChanged(float charge)
         {
-            chargeSlider.value = charge;
+            if (chargeSlider != null) chargeSlider.value = charge;
         }
 
         private void HandleJumped(JumpDirection direction, float charge)
         {
             successfulJumps++;
-            if (successfulJumps >= 3)
+            if (successfulJumps >= 3 && tutorialHint != null)
             {
                 tutorialHint.SetActive(false);
             }
@@ -135,8 +216,10 @@ namespace Summit.Game.UI
 
         private void HandleProgressChanged(float current, float highest, float best)
         {
-            currentHeightText.text = $"HEIGHT   {Mathf.RoundToInt(current * 10f):000}m";
-            bestHeightText.text = $"BEST       {Mathf.RoundToInt(best * 10f):000}m";
+            if (currentHeightText != null) currentHeightText.text =
+                (authoredHeightLabels ? "" : "HEIGHT   ") + $"{Mathf.RoundToInt(current * 10f):000}m";
+            if (bestHeightText != null) bestHeightText.text =
+                (authoredHeightLabels ? "" : "BEST       ") + $"{Mathf.RoundToInt(best * 10f):000}m";
         }
 
         private void HandleTimeChanged(float seconds)
@@ -145,7 +228,7 @@ namespace Summit.Game.UI
             int minutes = totalHundredths / 6000;
             int remainingSeconds = totalHundredths / 100 % 60;
             int hundredths = totalHundredths % 100;
-            timerText.text = $"{minutes:00}:{remainingSeconds:00}.{hundredths:00}";
+            if (timerText != null) timerText.text = $"{minutes:00}:{remainingSeconds:00}.{hundredths:00}";
         }
 
         private void HandlePauseChanged(bool paused)
@@ -158,11 +241,12 @@ namespace Summit.Game.UI
 
         private void HandleSettingsChanged()
         {
-            chargeRoot.SetActive(settingsService.ShowChargeIndicator);
+            if (chargeRoot != null) chargeRoot.SetActive(settingsService.ShowChargeIndicator);
         }
 
         private void OpenSettingsFromHud()
         {
+            if (storyMode) return;
             if (!pauseService.IsPaused)
             {
                 pauseService.Pause();
@@ -198,10 +282,17 @@ namespace Summit.Game.UI
             ShowVictory();
         }
 
-        private void ShowVictory()
+        public void ShowVictory()
         {
+            if (!initialized) return;
+            storyMode = true;
+            runTimer.Stop();
+            pauseService.Pause();
+            pausePanel.SetActive(false);
+            settingsPanel.gameObject.SetActive(false);
             cutscenePanel.SetActive(false);
-            victoryTimeText.text = $"Completion Time    {timerText.text}";
+            HandleTimeChanged(runTimer.ElapsedSeconds);
+            victoryTimeText.text = $"Completion Time    {(timerText != null ? timerText.text : runTimer.ElapsedSeconds.ToString("0.00") + " s")}";
             victoryHeightText.text = $"Highest Reached    {Mathf.RoundToInt(progressTracker.HighestHeight * 10f):000} m";
             victoryPanel.SetActive(true);
         }

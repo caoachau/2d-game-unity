@@ -8,16 +8,34 @@ namespace Summit.Game.Input
     {
         private bool jumpPressed;
         private bool jumpReleased;
+        private bool gameplayEnabled = true;
 
         public event Action PausePressed;
 
         public float Horizontal { get; private set; }
+        public float Vertical { get; private set; }
         public bool JumpHeld { get; private set; }
 
         private void Update()
         {
             ReadKeyboard();
             ReadGamepad();
+            if (!gameplayEnabled) ClearGameplayInput();
+        }
+
+        public void SetGameplayEnabled(bool value)
+        {
+            gameplayEnabled = value;
+            ClearGameplayInput();
+        }
+
+        private void ClearGameplayInput()
+        {
+            Horizontal = 0f;
+            Vertical = 0f;
+            JumpHeld = false;
+            jumpPressed = false;
+            jumpReleased = false;
         }
 
         public bool ConsumeJumpPressed()
@@ -38,6 +56,7 @@ namespace Summit.Game.Input
         {
             Keyboard keyboard = Keyboard.current;
             float keyboardHorizontal = 0f;
+            float keyboardVertical = 0f;
 
             if (keyboard != null)
             {
@@ -51,6 +70,16 @@ namespace Summit.Game.Input
                     keyboardHorizontal += 1f;
                 }
 
+                if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed)
+                {
+                    keyboardVertical += 1f;
+                }
+
+                if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed)
+                {
+                    keyboardVertical -= 1f;
+                }
+
                 CaptureJump(keyboard.spaceKey.wasPressedThisFrame, keyboard.spaceKey.wasReleasedThisFrame,
                     keyboard.spaceKey.isPressed);
 
@@ -61,6 +90,7 @@ namespace Summit.Game.Input
             }
 
             Horizontal = Mathf.Clamp(keyboardHorizontal, -1f, 1f);
+            Vertical = Mathf.Clamp(keyboardVertical, -1f, 1f);
         }
 
         private void ReadGamepad()
@@ -76,6 +106,13 @@ namespace Summit.Game.Input
             if (Mathf.Abs(gamepadHorizontal) > Mathf.Abs(Horizontal))
             {
                 Horizontal = gamepadHorizontal;
+            }
+
+            float gamepadVertical = gamepad.dpad.up.isPressed ? 1f :
+                gamepad.dpad.down.isPressed ? -1f : gamepad.leftStick.y.ReadValue();
+            if (Mathf.Abs(gamepadVertical) > Mathf.Abs(Vertical))
+            {
+                Vertical = gamepadVertical;
             }
 
             CaptureJump(gamepad.buttonSouth.wasPressedThisFrame, gamepad.buttonSouth.wasReleasedThisFrame,
@@ -101,6 +138,7 @@ namespace Summit.Game.Input
 
         private void LateUpdate()
         {
+            if (!gameplayEnabled) return;
             bool keyboardHeld = Keyboard.current != null && Keyboard.current.spaceKey.isPressed;
             bool gamepadHeld = Gamepad.current != null && Gamepad.current.buttonSouth.isPressed;
             JumpHeld = keyboardHeld || gamepadHeld;

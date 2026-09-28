@@ -28,6 +28,24 @@ namespace Summit.Game.Application
 
         private void Start()
         {
+            bool sharedHud = SharedLevelHud.Ensure(gameObject.scene) != null;
+            // Scene-authored maps can add the Player prefab without manually
+            // wiring every reference on this scene bootstrapper.
+            if (inputReader == null)
+            {
+                inputReader = SharedLevelHud.FindInScene<PlayerInputReader>(gameObject.scene);
+            }
+
+            if (jumpController == null)
+            {
+                jumpController = SharedLevelHud.FindInScene<PlayerJumpController>(gameObject.scene);
+            }
+
+            if (playerTransform == null && jumpController != null)
+            {
+                playerTransform = jumpController.transform;
+            }
+
             if (inputReader == null || jumpController == null)
             {
                 Debug.LogError("[GameSceneBootstrapper] Required scene dependency is missing.", this);
@@ -57,7 +75,7 @@ namespace Summit.Game.Application
                 cameraFollow.Initialize(playerTransform);
             }
 
-            if (progressTracker != null && runTimer != null && goalTrigger != null && gameUi != null)
+            if (!sharedHud && progressTracker != null && runTimer != null && goalTrigger != null && gameUi != null)
             {
                 float startY = levelStart != null ? levelStart.position.y : playerTransform.position.y;
                 progressTracker.Initialize(playerTransform, saveService, startY, goalTrigger.transform.position.y);
@@ -66,7 +84,7 @@ namespace Summit.Game.Application
                 goalTrigger.Reached += HandleGoalReached;
             }
 
-            inputReader.PausePressed += HandlePausePressed;
+            if (!sharedHud) inputReader.PausePressed += HandlePausePressed;
         }
 
         private void OnDestroy()

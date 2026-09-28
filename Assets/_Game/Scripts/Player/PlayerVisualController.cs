@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Summit.Game.Player
 {
     /// <summary>
-    /// Sprite state machine for the Fallen Spires character. It only swaps animation
+    /// Sprite state machine for the supplied Adventurer action sequences. It only swaps animation
     /// frames; Rigidbody2D is solely responsible for world movement.
     /// </summary>
     [AddComponentMenu("Summit/Player Animator")]
@@ -15,14 +15,13 @@ namespace Summit.Game.Player
     [RequireComponent(typeof(SpriteRenderer), typeof(PlayerMovement), typeof(PlayerStateController))]
     public sealed class PlayerVisualController : MonoBehaviour
     {
-        private const string CharacterResourcePath = "Characters/FallenSpires";
-        private const float PixelsPerUnit = 48f;
-        private const float StandingFrameHeightPixels = 49f;
+        private const string CharacterResourcePath = "Characters/Adventurer";
+        private const string CharacterMaterialPath = "Characters/AdventurerSprite";
+        [SerializeField] private bool useAlternateRun;
 
         [SerializeField, Min(1f)] private float idleFramesPerSecond = 7f;
         [SerializeField, Min(1f)] private float runFramesPerSecond = 11f;
         [SerializeField, Min(1f)] private float actionFramesPerSecond = 12f;
-        [SerializeField, Min(0f)] private float visualFloorDrop = 0.55f;
         [SerializeField, Min(0.1f)] private float visualScale = 1.2f;
 
         private readonly Dictionary<string, Sprite[]> animations = new();
@@ -46,6 +45,7 @@ namespace Summit.Game.Player
             activeRenderedScale = visualScale;
             spriteRenderer = CreateVisualRenderer(GetComponent<SpriteRenderer>());
             BuildAnimationLookup();
+            if (animations.ContainsKey("idle")) BeginAnimation("idle");
         }
 
         private SpriteRenderer CreateVisualRenderer(SpriteRenderer source)
@@ -58,17 +58,12 @@ namespace Summit.Game.Player
             SpriteRenderer renderer = visual.GetComponent<SpriteRenderer>();
             renderer.sortingLayerID = source.sortingLayerID;
             renderer.sortingOrder = source.sortingOrder;
+            Material characterMaterial = Resources.Load<Material>(CharacterMaterialPath);
+            if (characterMaterial != null) renderer.sharedMaterial = characterMaterial;
             renderer.color = Color.white;
             renderer.maskInteraction = SpriteMaskInteraction.None;
             source.enabled = false;
             return renderer;
-        }
-
-        /// <summary>Sets a scene-specific visual correction without moving the Rigidbody2D.</summary>
-        public void SetVisualFloorDrop(float floorDrop)
-        {
-            visualFloorDrop = Mathf.Max(0f, floorDrop);
-            ApplyVisualTransform(activeRenderedScale);
         }
 
         private void ApplyVisualTransform(float renderedScale)
@@ -81,16 +76,18 @@ namespace Summit.Game.Player
             float colliderFoot = bodyCollider != null
                 ? bodyCollider.offset.y - bodyCollider.size.y * 0.5f
                 : -0.675f;
-            // Enlarging around the sprite pivot would lower its boots. Offset the
-            // child back up by the same amount so its feet keep touching the floor.
-            visualTransform.localPosition = new Vector3(0f,
-                -visualFloorDrop - colliderFoot * (renderedScale - 1f), 0f);
+            // Align the current frame, including short crouch frames and scaled
+            // running frames. A scene-specific downward offset sinks the boots.
+            float spriteFoot = spriteRenderer != null && spriteRenderer.sprite != null
+                ? spriteRenderer.sprite.bounds.min.y : colliderFoot;
+            visualTransform.localPosition = new Vector3(bodyCollider != null ? bodyCollider.offset.x : 0f,
+                colliderFoot - spriteFoot * renderedScale, 0f);
             visualTransform.localScale = Vector3.one * renderedScale;
         }
 
         private void Update()
         {
-            if (animations.Count == 0)
+            if (animations.Count == 0 || Time.timeScale <= 0f)
             {
                 return;
             }
@@ -107,36 +104,32 @@ namespace Summit.Game.Player
                 BeginAnimation(nextAnimation);
             }
 
-            AdvanceFrame(Time.deltaTime);
+            AdvanceFrame((activeAnimation == "climb" || activeAnimation == "slide") && Mathf.Abs(movement.Velocity.y) < .01f
+                ? 0f : Time.deltaTime);
         }
 
         private void BuildAnimationLookup()
         {
-            Sprite[] sprites = Resources.LoadAll<Texture2D>(CharacterResourcePath)
-                .Select(CreateRuntimeSprite)
-                .ToArray();
-            AddAnimation("idle", sprites, "idle_");
-            AddAnimation("run", sprites, "run_");
-            // Charging intentionally stops at crouch_02; crouch_03 is not used.
-            AddAnimation("crouch", sprites.Where(sprite => !string.Equals(sprite.name, "crouch_03", StringComparison.OrdinalIgnoreCase)), "crouch_");
-            AddAnimation("jump", sprites, "jump_");
-            AddAnimation("fall", sprites, "fall_");
-            AddAnimation("land", sprites, "land_");
+            Sprite[] sprites = Resources.LoadAll<Sprite>(CharacterResourcePath);
+            AddAnimation("run", sprites.Where(s => !s.name.StartsWith("run_alt_")), "run_");
+            AddAnimation("run_alt", sprites, "run_alt_");
+            AddAnimation("climb", sprites, "climb_up_");
+            AddAnimation("slide", sprites, "slide_down_");
+            // Frames 02-04 include neighbouring characters in the supplied sheet.
+            // Use clean poses for anticipation and takeoff instead.
+            AddSequence("idle", sprites, 1);
+            AddSequence("crouch", sprites, 10, 11);
+            AddSequence("jump", sprites, 5, 6, 7);
+            AddSequence("fall", sprites, 8, 9);
+            AddSequence("land", sprites, 10, 11, 12);
         }
 
-        private Sprite CreateRuntimeSprite(Texture2D texture)
+        private void AddSequence(string key, Sprite[] sprites, params int[] indices)
         {
-            // The art files have different heights. Align their lower edge to the
-            // physical bottom of the player's BoxCollider2D, so the visible boots
-            // rest on a platform instead of floating above it.
-            float colliderFoot = bodyCollider != null
-                ? bodyCollider.offset.y - bodyCollider.size.y * 0.5f
-                : -0.675f;
-            float pivotY = Mathf.Clamp01((-colliderFoot * PixelsPerUnit) / texture.height);
-            Sprite sprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height),
-                new Vector2(0.5f, pivotY), PixelsPerUnit);
-            sprite.name = texture.name;
-            return sprite;
+            Sprite[] frames = indices.Select(index => sprites.FirstOrDefault(
+                sprite => sprite.name == $"jump_vertical_{index:00}"))
+                .Where(sprite => sprite != null).ToArray();
+            if (frames.Length > 0) animations[key] = frames;
         }
 
         private void AddAnimation(string animationName, IEnumerable<Sprite> sprites, string prefix)
@@ -153,17 +146,16 @@ namespace Summit.Game.Player
 
         private string GetRequestedAnimation()
         {
-            // Never skip the jump sequence, including on a minimum-charge hop.
-            if (activeAnimation == "jump" && !activeAnimationFinished)
+            if (stateController.CurrentState == PlayerState.Climbing)
             {
-                return "jump";
+                if (movement.Velocity.y < -.01f) return "slide";
+                if (movement.Velocity.y > .01f) return "climb";
+                return activeAnimation is "climb" or "slide" ? activeAnimation : "climb";
             }
-
-            // Let landing finish before returning to Idle or Run.
-            if (activeAnimation == "land" && !activeAnimationFinished)
-            {
-                return "land";
-            }
+            // A new jump, charge or ladder action takes priority over landing.
+            if (activeAnimation == "land" && !activeAnimationFinished &&
+                stateController.CurrentState == PlayerState.Grounded &&
+                Mathf.Abs(movement.MoveInput) < .05f) return "land";
 
             return stateController.CurrentState switch
             {
@@ -171,7 +163,8 @@ namespace Summit.Game.Player
                 PlayerState.Jumping => "jump",
                 PlayerState.Falling => "fall",
                 PlayerState.Landing => "land",
-                _ => Mathf.Abs(movement.MoveInput) > 0.05f ? "run" : "idle"
+                PlayerState.Climbing => "climb",
+                _ => Mathf.Abs(movement.MoveInput) > 0.05f ? (useAlternateRun ? "run_alt" : "run") : "idle"
             };
         }
 
@@ -207,7 +200,7 @@ namespace Summit.Game.Player
                 }
                 else
                 {
-                    // crouch_02, jump_05 and land_05 stay on screen.
+                    // Hold the final pose until the physical state changes.
                     activeAnimationFinished = true;
                 }
 
@@ -220,14 +213,14 @@ namespace Summit.Game.Player
             return animationName switch
             {
                 "idle" => idleFramesPerSecond,
-                "run" => runFramesPerSecond,
+                "run" or "run_alt" => runFramesPerSecond,
                 _ => actionFramesPerSecond
             };
         }
 
         private static bool Loops(string animationName)
         {
-            return animationName is "idle" or "run" or "fall";
+            return animationName is "idle" or "run" or "run_alt" or "climb" or "slide";
         }
 
         private void UpdateFacing()
@@ -250,11 +243,9 @@ namespace Summit.Game.Player
             Sprite frame = frames[Mathf.Clamp(frameIndex, 0, frames.Length - 1)];
             spriteRenderer.sprite = frame;
 
-            // Run art is 44 px high while idle art is 49 px. Normalize only the
-            // running animation so walking left/right never makes the hero shrink.
-            activeRenderedScale = activeAnimation == "run"
-                ? visualScale * StandingFrameHeightPixels / frame.texture.height
-                : visualScale;
+            // Import settings normalize each action at a shared character height.
+            // Trimmed sprite bounds keep boots aligned with the physical feet.
+            activeRenderedScale = visualScale;
             ApplyVisualTransform(activeRenderedScale);
         }
     }

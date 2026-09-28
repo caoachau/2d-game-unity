@@ -48,9 +48,6 @@ namespace Summit.Game.Area3OldCastle
             {
                 playerVisual = jumpController.gameObject.AddComponent<PlayerVisualController>();
             }
-            // Area 3 platforms already have their collider close to the artwork;
-            // unlike Area 2 they need no extra visual drop.
-            playerVisual.SetVisualFloorDrop(0f);
             cameraFollow?.Initialize(playerTransform);
             hudController?.Initialize();
 

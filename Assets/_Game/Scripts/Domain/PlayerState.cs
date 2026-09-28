@@ -6,6 +6,7 @@ namespace Summit.Game.Domain
         Charging,
         Jumping,
         Falling,
-        Landing
+        Landing,
+        Climbing
     }
 }

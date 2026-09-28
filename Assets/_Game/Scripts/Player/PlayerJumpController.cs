@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Summit.Game.Configuration;
 using Summit.Game.Domain;
 using Summit.Game.Input;
@@ -13,6 +14,7 @@ namespace Summit.Game.Player
         [SerializeField] private PlayerGroundDetector groundDetector;
         [SerializeField] private PlayerStateController stateController;
         [SerializeField] private PlayerMovementConfig config;
+        [SerializeField, Min(0.1f)] private float climbSpeed = 3f;
 
         private IPlayerInput input;
         private float chargeDuration;
@@ -20,6 +22,8 @@ namespace Summit.Game.Player
         private float lastAirborneVerticalVelocity;
         private bool wasGrounded;
         private bool jumpReleasePending;
+        private readonly HashSet<LadderClimbZone> ladders = new();
+        private bool isClimbing;
 
         public event Action<float> ChargeChanged;
         public event Action<JumpDirection, float> Jumped;
@@ -61,13 +65,23 @@ namespace Summit.Game.Player
 
             movement.Initialize(config);
             groundDetector.Initialize(config);
+            PlayerLevelGeometry.Configure(this);
             wasGrounded = groundDetector.Refresh();
             stateController.TransitionTo(wasGrounded ? PlayerState.Grounded : PlayerState.Falling);
         }
 
+        public void CancelCharge()
+        {
+            if (stateController.CurrentState != PlayerState.Charging) return;
+            chargeDuration = 0f;
+            jumpReleasePending = false;
+            stateController.TransitionTo(groundDetector.IsGrounded ? PlayerState.Grounded : PlayerState.Falling);
+            ChargeChanged?.Invoke(0f);
+        }
+
         private void Update()
         {
-            if (input == null || config == null)
+            if (input == null || config == null || Time.timeScale <= 0f)
             {
                 return;
             }
@@ -93,9 +107,40 @@ namespace Summit.Game.Player
 
         private void FixedUpdate()
         {
-            if (config == null)
+            if (config == null || input == null)
             {
                 return;
+            }
+
+            ladders.RemoveWhere(zone => zone == null || !zone.isActiveAndEnabled);
+            bool insideLadder = ladders.Count > 0;
+            bool leavingSideways = Mathf.Abs(input.Horizontal) > .1f;
+            bool canStartClimb = false;
+            foreach (LadderClimbZone ladder in ladders) canStartClimb |= ladder.CanStartClimb;
+            if (insideLadder && canStartClimb && !leavingSideways && input.Vertical > 0.1f && !isClimbing)
+            {
+                CancelCharge();
+                isClimbing = true;
+                chargeDuration = 0f;
+                jumpReleasePending = false;
+                ChargeChanged?.Invoke(0f);
+            }
+
+            if (isClimbing)
+            {
+                if (!insideLadder || leavingSideways)
+                {
+                    isClimbing = false;
+                    movement.StopClimbing();
+                }
+                else
+                {
+                    movement.SetMoveInput(0f);
+                    movement.SetClimbingVelocity(input != null ? input.Vertical : 0f, climbSpeed);
+                    stateController.TransitionTo(PlayerState.Climbing);
+                    wasGrounded = false;
+                    return;
+                }
             }
 
             bool grounded = groundDetector.Refresh();
@@ -128,6 +173,28 @@ namespace Summit.Game.Player
             }
 
             wasGrounded = grounded;
+        }
+
+        public void EnterLadder(LadderClimbZone zone)
+        {
+            if (zone != null && enabled) ladders.Add(zone);
+        }
+
+        public void ExitLadder(LadderClimbZone zone)
+        {
+            ladders.Remove(zone);
+            if (ladders.Count == 0 && isClimbing)
+            {
+                isClimbing = false;
+                movement.StopClimbing();
+            }
+        }
+
+        private void OnDisable()
+        {
+            ladders.Clear();
+            if (isClimbing && movement != null) movement.StopClimbing();
+            isClimbing = false;
         }
 
         private bool CanStartCharging()
